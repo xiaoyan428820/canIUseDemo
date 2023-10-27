@@ -91,6 +91,9 @@ importers:
       '@tarojs/plugin-platform-jd':
         specifier: workspace:*
         version: link:packages/taro-jd
+      '@tarojs/plugin-platform-mpharmony':
+        specifier: workspace:*
+        version: link:packages/taro-platform-mpharmony
       '@tarojs/plugin-platform-qq':
         specifier: workspace:*
         version: link:packages/taro-qq
@@ -1688,8 +1691,8 @@ importers:
         specifier: ^47.0.0
         version: registry.npmjs.org/jest-expo@47.0.1(@babel/core@7.21.8)(jest@26.6.3)(react@18.1.0)
       metro-babel-register:
-        specifier: ^0.72.1
-        version: registry.npmjs.org/metro-babel-register@0.72.3
+        specifier: ^0.80.0
+        version: registry.npmjs.org/metro-babel-register@0.80.0
       metro-react-native-babel-preset:
         specifier: ^0.72.1
         version: registry.npmjs.org/metro-react-native-babel-preset@0.72.3(@babel/core@7.21.8)
@@ -2460,6 +2463,9 @@ importers:
       babel-plugin-transform-taroapi:
         specifier: workspace:*
         version: link:../babel-plugin-transform-taroapi
+      lodash-es:
+        specifier: 4.17.21
+        version: registry.npmjs.org/lodash-es@4.17.21
       resolve:
         specifier: ^1.22.0
         version: registry.npmjs.org/resolve@1.22.2
@@ -2482,6 +2488,12 @@ importers:
       rollup-plugin-ts:
         specifier: ^3.0.2
         version: registry.npmjs.org/rollup-plugin-ts@3.2.0(@babel/core@7.21.8)(@babel/plugin-transform-runtime@7.21.4)(@babel/preset-env@7.21.5)(@babel/preset-typescript@7.21.5)(@babel/runtime@7.21.5)(rollup@2.79.1)(typescript@4.9.5)
+      ts-node:
+        specifier: ^10.9.1
+        version: registry.npmjs.org/ts-node@10.9.1(@types/node@14.18.45)(typescript@4.9.5)
+      tsconfig-paths:
+        specifier: ^3.14.1
+        version: registry.npmjs.org/tsconfig-paths@3.14.2
       typescript:
         specifier: ^4.7.4
         version: registry.npmjs.org/typescript@4.9.5
@@ -4660,7 +4672,7 @@ packages:
     version: 7.18.6
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': registry.npmjs.org/@babel/types@7.21.5
+      '@babel/types': registry.npmjs.org/@babel/types@7.22.11
 
   registry.npmjs.org/@babel/helper-builder-binary-assignment-operator-visitor@7.22.10:
     resolution: {integrity: sha512-Av0qubwDQxC56DoUReVDeLfMEjYYSN1nZrTUrWkXd7hpU73ymRANkbuDm3yni9npkn+RXy9nNbEJZEzXr7xrfQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@babel/helper-builder-binary-assignment-operator-visitor/-/helper-builder-binary-assignment-operator-visitor-7.22.10.tgz}
@@ -4943,7 +4955,7 @@ packages:
       '@babel/helper-optimise-call-expression': registry.npmjs.org/@babel/helper-optimise-call-expression@7.18.6
       '@babel/template': registry.npmjs.org/@babel/template@7.21.9
       '@babel/traverse': registry.npmjs.org/@babel/traverse@7.21.5
-      '@babel/types': registry.npmjs.org/@babel/types@7.21.5
+      '@babel/types': registry.npmjs.org/@babel/types@7.22.11
     transitivePeerDependencies:
       - supports-color
 
@@ -4977,7 +4989,7 @@ packages:
     version: 7.18.6
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': registry.npmjs.org/@babel/types@7.21.5
+      '@babel/types': registry.npmjs.org/@babel/types@7.22.11
 
   registry.npmjs.org/@babel/helper-string-parser@7.21.5:
     resolution: {integrity: sha512-5pTUx3hAJaZIdW99sJ6ZUUgWq/Y+Hja7TowEnLNMm1VivRgZQL3vpBY3qUACVsvw+yQU6+YgfBVmcbLaZtrA1w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.21.5.tgz}
@@ -5346,6 +5358,7 @@ packages:
     name: '@babel/plugin-proposal-export-namespace-from'
     version: 7.18.9
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-export-namespace-from instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5360,6 +5373,7 @@ packages:
     name: '@babel/plugin-proposal-export-namespace-from'
     version: 7.18.9
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-export-namespace-from instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -16407,6 +16421,14 @@ packages:
     version: 6.13.0
     dev: false
 
+  registry.npmjs.org/babel-plugin-syntax-hermes-parser@0.17.0:
+    resolution: {integrity: sha512-sYdVKubF925dghmVgfsxjNDDsYdzbqmLZZm+mO7ZxSgOgpO5ws4tpvc7UlzOTj7Yoc1kaNLNgm4Ebi491hsF1w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-syntax-hermes-parser/-/babel-plugin-syntax-hermes-parser-0.17.0.tgz}
+    name: babel-plugin-syntax-hermes-parser
+    version: 0.17.0
+    dependencies:
+      hermes-parser: registry.npmjs.org/hermes-parser@0.17.0
+    dev: true
+
   registry.npmjs.org/babel-plugin-syntax-jsx@6.18.0:
     resolution: {integrity: sha512-qrPaCSo9c8RHNRHIotaufGbuOBN8rtdC4QrrFFc43vyWCCz7Kl7GL1PGaXtMGQZUXrkCjNEgxDfmAuAabr/rlw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz}
     name: babel-plugin-syntax-jsx
@@ -16776,6 +16798,17 @@ packages:
       babel-plugin-syntax-export-extensions: registry.npmjs.org/babel-plugin-syntax-export-extensions@6.13.0
       babel-runtime: registry.npmjs.org/babel-runtime@6.26.0
     dev: false
+
+  registry.npmjs.org/babel-plugin-transform-flow-enums@0.0.2(@babel/core@7.21.8):
+    resolution: {integrity: sha512-g4aaCrDDOsWjbm0PUUeVnkcVd6AKJsVc/MbnPhEotEpkeJQP6b8nzewohQi7+QS8UyPehOhGWn0nOwjvWpmMvQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-transform-flow-enums/-/babel-plugin-transform-flow-enums-0.0.2.tgz}
+    id: registry.npmjs.org/babel-plugin-transform-flow-enums/0.0.2
+    name: babel-plugin-transform-flow-enums
+    version: 0.0.2
+    dependencies:
+      '@babel/plugin-syntax-flow': registry.npmjs.org/@babel/plugin-syntax-flow@7.22.5(@babel/core@7.21.8)
+    transitivePeerDependencies:
+      - '@babel/core'
+    dev: true
 
   registry.npmjs.org/babel-plugin-transform-flow-strip-types@6.22.0:
     resolution: {integrity: sha512-TxIM0ZWNw9oYsoTthL3lvAK3+eTujzktoXJg4ubGvICGbVuXVYv5hHv0XXpz8fbqlJaGYY4q5SVzaSmsg3t4Fg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-transform-flow-strip-types/-/babel-plugin-transform-flow-strip-types-6.22.0.tgz}
@@ -24880,10 +24913,24 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
+  registry.npmjs.org/hermes-estree@0.17.0:
+    resolution: {integrity: sha512-bW9+bMZqnro+0+l6dUqTJW0VaNUvs4HRHh/J7VotTGnMmhBFRIcJz6ZxrRE7xIXmK7S5bJE9qrEooSiig4N70g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.17.0.tgz}
+    name: hermes-estree
+    version: 0.17.0
+    dev: true
+
   registry.npmjs.org/hermes-estree@0.8.0:
     resolution: {integrity: sha512-W6JDAOLZ5pMPMjEiQGLCXSSV7pIBEgRR5zGkxgmzGSXHOxqV5dC/M1Zevqpbm9TZDE5tu358qZf8Vkzmsc+u7Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.8.0.tgz}
     name: hermes-estree
     version: 0.8.0
+
+  registry.npmjs.org/hermes-parser@0.17.0:
+    resolution: {integrity: sha512-2fmppmZheY1UU071EMKAzXfuUCiDXF3fmzKLuN1XmE3+njIFs3CAeKP88+FtNBUpS6pEMJv6lPXCaJGqGsrURQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-parser/-/hermes-parser-0.17.0.tgz}
+    name: hermes-parser
+    version: 0.17.0
+    dependencies:
+      hermes-estree: registry.npmjs.org/hermes-estree@0.17.0
+    dev: true
 
   registry.npmjs.org/hermes-parser@0.8.0:
     resolution: {integrity: sha512-yZKalg1fTYG5eOiToLUaw69rQfZq/fi+/NtEXRU7N87K/XobNRhRWorh80oSge2lWUiZfTgUvRJH+XgZWrhoqA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-parser/-/hermes-parser-0.8.0.tgz}
@@ -30606,20 +30653,21 @@ packages:
     version: 1.1.2
     engines: {node: '>= 0.6'}
 
-  registry.npmjs.org/metro-babel-register@0.72.3:
-    resolution: {integrity: sha512-OqG9rRLBMH7AkQ9Dmw16PfFIEe0ZQug62soZ4BJ0YC3fuYi4xD9WkxuVQeNy9L39Zu0iZUPd5+dXddpKaLxftA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/metro-babel-register/-/metro-babel-register-0.72.3.tgz}
+  registry.npmjs.org/metro-babel-register@0.80.0:
+    resolution: {integrity: sha512-pxCNNS/PQ2Y6P9+Rhg9P3Gp7N8neuesNNgDneWkcz3LM1u6fxjhcKtNGPc+hX9Q4pRThJ24lB6/hv5PpnTtR+w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/metro-babel-register/-/metro-babel-register-0.80.0.tgz}
     name: metro-babel-register
-    version: 0.72.3
+    version: 0.80.0
+    engines: {node: '>=18'}
     dependencies:
       '@babel/core': registry.npmjs.org/@babel/core@7.21.8
-      '@babel/plugin-proposal-nullish-coalescing-operator': registry.npmjs.org/@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.21.8)
-      '@babel/plugin-proposal-optional-chaining': registry.npmjs.org/@babel/plugin-proposal-optional-chaining@7.21.0(@babel/core@7.21.8)
-      '@babel/plugin-syntax-class-properties': registry.npmjs.org/@babel/plugin-syntax-class-properties@7.12.13(@babel/core@7.21.8)
-      '@babel/plugin-transform-flow-strip-types': registry.npmjs.org/@babel/plugin-transform-flow-strip-types@7.21.0(@babel/core@7.21.8)
+      '@babel/plugin-proposal-export-namespace-from': registry.npmjs.org/@babel/plugin-proposal-export-namespace-from@7.18.9(@babel/core@7.21.8)
+      '@babel/plugin-transform-flow-strip-types': registry.npmjs.org/@babel/plugin-transform-flow-strip-types@7.22.5(@babel/core@7.21.8)
       '@babel/plugin-transform-modules-commonjs': registry.npmjs.org/@babel/plugin-transform-modules-commonjs@7.21.5(@babel/core@7.21.8)
       '@babel/preset-typescript': registry.npmjs.org/@babel/preset-typescript@7.21.5(@babel/core@7.21.8)
       '@babel/register': registry.npmjs.org/@babel/register@7.21.0(@babel/core@7.21.8)
       babel-plugin-replace-ts-export-assignment: registry.npmjs.org/babel-plugin-replace-ts-export-assignment@0.0.2
+      babel-plugin-syntax-hermes-parser: registry.npmjs.org/babel-plugin-syntax-hermes-parser@0.17.0
+      babel-plugin-transform-flow-enums: registry.npmjs.org/babel-plugin-transform-flow-enums@0.0.2(@babel/core@7.21.8)
       escape-string-regexp: registry.npmjs.org/escape-string-regexp@1.0.5
     transitivePeerDependencies:
       - supports-color
