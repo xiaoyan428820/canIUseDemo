@@ -40,7 +40,7 @@
   "author": "yuche",
   "license": "MIT",
   "dependencies": {
-    "@babel/code-frame": "^7.21.4",
+    "@babel/code-frame": "^7.22.13",
     "@babel/core": "^7.21.4",
     "@babel/generator": "^7.21.4",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
