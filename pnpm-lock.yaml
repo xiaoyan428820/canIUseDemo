@@ -91,6 +91,9 @@ importers:
       '@tarojs/plugin-platform-jd':
         specifier: workspace:*
         version: link:packages/taro-jd
+      '@tarojs/plugin-platform-mpharmony':
+        specifier: workspace:*
+        version: link:packages/taro-platform-mpharmony
       '@tarojs/plugin-platform-qq':
         specifier: workspace:*
         version: link:packages/taro-qq
@@ -2460,6 +2463,9 @@ importers:
       babel-plugin-transform-taroapi:
         specifier: workspace:*
         version: link:../babel-plugin-transform-taroapi
+      lodash-es:
+        specifier: 4.17.21
+        version: registry.npmjs.org/lodash-es@4.17.21
       resolve:
         specifier: ^1.22.0
         version: registry.npmjs.org/resolve@1.22.2
@@ -2482,6 +2488,12 @@ importers:
       rollup-plugin-ts:
         specifier: ^3.0.2
         version: registry.npmjs.org/rollup-plugin-ts@3.2.0(@babel/core@7.21.8)(@babel/plugin-transform-runtime@7.21.4)(@babel/preset-env@7.21.5)(@babel/preset-typescript@7.21.5)(@babel/runtime@7.21.5)(rollup@2.79.1)(typescript@4.9.5)
+      ts-node:
+        specifier: ^10.9.1
+        version: registry.npmjs.org/ts-node@10.9.1(@types/node@14.18.45)(typescript@4.9.5)
+      tsconfig-paths:
+        specifier: ^3.14.1
+        version: registry.npmjs.org/tsconfig-paths@3.14.2
       typescript:
         specifier: ^4.7.4
         version: registry.npmjs.org/typescript@4.9.5
@@ -3177,8 +3189,8 @@ importers:
         specifier: ^3.12.2
         version: registry.npmjs.org/less@3.13.1
       metro-react-native-babel-transformer:
-        specifier: ^0.72.1
-        version: registry.npmjs.org/metro-react-native-babel-transformer@0.72.3(@babel/core@7.21.8)
+        specifier: ^0.77.0
+        version: registry.npmjs.org/metro-react-native-babel-transformer@0.77.0(@babel/core@7.21.8)
       postcss-import:
         specifier: ^14.0.0
         version: registry.npmjs.org/postcss-import@14.1.0(postcss@8.4.23)
@@ -3280,8 +3292,8 @@ importers:
         specifier: ^0.72.1
         version: registry.npmjs.org/metro-core@0.72.3
       metro-react-native-babel-transformer:
-        specifier: ^0.72.1
-        version: registry.npmjs.org/metro-react-native-babel-transformer@0.72.3(@babel/core@7.21.8)
+        specifier: ^0.77.0
+        version: registry.npmjs.org/metro-react-native-babel-transformer@0.77.0(@babel/core@7.21.8)
       metro-resolver:
         specifier: ^0.72.1
         version: registry.npmjs.org/metro-resolver@0.72.3
@@ -4660,7 +4672,7 @@ packages:
     version: 7.18.6
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': registry.npmjs.org/@babel/types@7.21.5
+      '@babel/types': registry.npmjs.org/@babel/types@7.22.11
 
   registry.npmjs.org/@babel/helper-builder-binary-assignment-operator-visitor@7.22.10:
     resolution: {integrity: sha512-Av0qubwDQxC56DoUReVDeLfMEjYYSN1nZrTUrWkXd7hpU73ymRANkbuDm3yni9npkn+RXy9nNbEJZEzXr7xrfQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@babel/helper-builder-binary-assignment-operator-visitor/-/helper-builder-binary-assignment-operator-visitor-7.22.10.tgz}
@@ -4943,7 +4955,7 @@ packages:
       '@babel/helper-optimise-call-expression': registry.npmjs.org/@babel/helper-optimise-call-expression@7.18.6
       '@babel/template': registry.npmjs.org/@babel/template@7.21.9
       '@babel/traverse': registry.npmjs.org/@babel/traverse@7.21.5
-      '@babel/types': registry.npmjs.org/@babel/types@7.21.5
+      '@babel/types': registry.npmjs.org/@babel/types@7.22.11
     transitivePeerDependencies:
       - supports-color
 
@@ -4977,7 +4989,7 @@ packages:
     version: 7.18.6
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/types': registry.npmjs.org/@babel/types@7.21.5
+      '@babel/types': registry.npmjs.org/@babel/types@7.22.11
 
   registry.npmjs.org/@babel/helper-string-parser@7.21.5:
     resolution: {integrity: sha512-5pTUx3hAJaZIdW99sJ6ZUUgWq/Y+Hja7TowEnLNMm1VivRgZQL3vpBY3qUACVsvw+yQU6+YgfBVmcbLaZtrA1w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@babel/helper-string-parser/-/helper-string-parser-7.21.5.tgz}
@@ -5135,6 +5147,7 @@ packages:
     name: '@babel/plugin-proposal-async-generator-functions'
     version: 7.20.7
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5153,6 +5166,7 @@ packages:
     name: '@babel/plugin-proposal-async-generator-functions'
     version: 7.20.7
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-async-generator-functions instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5456,6 +5470,7 @@ packages:
     name: '@babel/plugin-proposal-nullish-coalescing-operator'
     version: 7.18.6
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5470,6 +5485,7 @@ packages:
     name: '@babel/plugin-proposal-nullish-coalescing-operator'
     version: 7.18.6
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5483,6 +5499,7 @@ packages:
     name: '@babel/plugin-proposal-numeric-separator'
     version: 7.18.6
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5497,6 +5514,7 @@ packages:
     name: '@babel/plugin-proposal-numeric-separator'
     version: 7.18.6
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5543,6 +5561,7 @@ packages:
     name: '@babel/plugin-proposal-optional-catch-binding'
     version: 7.18.6
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -5557,6 +5576,7 @@ packages:
     name: '@babel/plugin-proposal-optional-catch-binding'
     version: 7.18.6
     engines: {node: '>=6.9.0'}
+    deprecated: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-catch-binding instead.
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
@@ -8206,7 +8226,7 @@ packages:
       getenv: registry.npmjs.org/getenv@1.0.0
       glob: registry.npmjs.org/glob@7.1.6
       resolve-from: registry.npmjs.org/resolve-from@5.0.0
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       slash: registry.npmjs.org/slash@3.0.0
       xcode: registry.npmjs.org/xcode@3.0.1
       xml2js: registry.npmjs.org/xml2js@0.4.23
@@ -10526,7 +10546,7 @@ packages:
     version: 1.1.1
     dependencies:
       '@gar/promisify': registry.npmjs.org/@gar/promisify@1.1.3
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
 
   registry.npmjs.org/@npmcli/move-file@1.1.2:
     resolution: {integrity: sha512-1SUf/Cg2GzGDyaf15aR9St9TWlb+XvbZXWpDx8YKs7MLzMH/BCeopv+y9vzrzgkfykCGuWOlSu3mZhj2+FQcrg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@npmcli/move-file/-/move-file-1.1.2.tgz}
@@ -13897,7 +13917,7 @@ packages:
       debug: registry.npmjs.org/debug@4.3.4(supports-color@6.1.0)
       globby: registry.npmjs.org/globby@11.1.0
       is-glob: registry.npmjs.org/is-glob@4.0.3
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       tsutils: registry.npmjs.org/tsutils@3.21.0(typescript@4.9.5)
       typescript: registry.npmjs.org/typescript@4.9.5
     transitivePeerDependencies:
@@ -13920,7 +13940,7 @@ packages:
       '@typescript-eslint/typescript-estree': registry.npmjs.org/@typescript-eslint/typescript-estree@5.59.2(typescript@4.9.5)
       eslint: registry.npmjs.org/eslint@8.40.0
       eslint-scope: registry.npmjs.org/eslint-scope@5.1.1
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -16777,6 +16797,17 @@ packages:
       babel-runtime: registry.npmjs.org/babel-runtime@6.26.0
     dev: false
 
+  registry.npmjs.org/babel-plugin-transform-flow-enums@0.0.2(@babel/core@7.21.8):
+    resolution: {integrity: sha512-g4aaCrDDOsWjbm0PUUeVnkcVd6AKJsVc/MbnPhEotEpkeJQP6b8nzewohQi7+QS8UyPehOhGWn0nOwjvWpmMvQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-transform-flow-enums/-/babel-plugin-transform-flow-enums-0.0.2.tgz}
+    id: registry.npmjs.org/babel-plugin-transform-flow-enums/0.0.2
+    name: babel-plugin-transform-flow-enums
+    version: 0.0.2
+    dependencies:
+      '@babel/plugin-syntax-flow': registry.npmjs.org/@babel/plugin-syntax-flow@7.22.5(@babel/core@7.21.8)
+    transitivePeerDependencies:
+      - '@babel/core'
+    dev: false
+
   registry.npmjs.org/babel-plugin-transform-flow-strip-types@6.22.0:
     resolution: {integrity: sha512-TxIM0ZWNw9oYsoTthL3lvAK3+eTujzktoXJg4ubGvICGbVuXVYv5hHv0XXpz8fbqlJaGYY4q5SVzaSmsg3t4Fg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/babel-plugin-transform-flow-strip-types/-/babel-plugin-transform-flow-strip-types-6.22.0.tgz}
     name: babel-plugin-transform-flow-strip-types
@@ -17583,7 +17614,7 @@ packages:
       caniuse-lite: registry.npmjs.org/caniuse-lite@1.0.30001486
       isbot: registry.npmjs.org/isbot@3.6.10
       object-path: registry.npmjs.org/object-path@0.11.8
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       ua-parser-js: registry.npmjs.org/ua-parser-js@1.0.35
     dev: true
 
@@ -17721,7 +17752,7 @@ packages:
     name: builtins
     version: 5.0.1
     dependencies:
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
 
   registry.npmjs.org/bytes@3.0.0:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/bytes/-/bytes-3.0.0.tgz}
@@ -18779,7 +18810,7 @@ packages:
       make-dir: registry.npmjs.org/make-dir@3.1.0
       onetime: registry.npmjs.org/onetime@5.1.2
       pkg-up: registry.npmjs.org/pkg-up@3.1.0
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
     dev: false
 
   registry.npmjs.org/config-chain@1.1.13:
@@ -20694,7 +20725,7 @@ packages:
       resolve: registry.npmjs.org/resolve@1.22.2
       sass: registry.npmjs.org/sass@1.50.0
       scss-parser: registry.npmjs.org/scss-parser@1.0.6
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       yargs: registry.npmjs.org/yargs@16.2.0
     transitivePeerDependencies:
       - supports-color
@@ -24353,7 +24384,7 @@ packages:
       es6-error: registry.npmjs.org/es6-error@4.1.1
       matcher: registry.npmjs.org/matcher@3.0.0
       roarr: registry.npmjs.org/roarr@2.15.4
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       serialize-error: registry.npmjs.org/serialize-error@7.0.1
     dev: false
     optional: true
@@ -24880,10 +24911,24 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
+  registry.npmjs.org/hermes-estree@0.14.0:
+    resolution: {integrity: sha512-L6M67+0/eSEbt6Ha2XOBFXL++7MR34EOJMgm+j7YCaI4L/jZqrVAg6zYQKzbs1ZCFDLvEQpOgLlapTX4gpFriA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.14.0.tgz}
+    name: hermes-estree
+    version: 0.14.0
+    dev: false
+
   registry.npmjs.org/hermes-estree@0.8.0:
     resolution: {integrity: sha512-W6JDAOLZ5pMPMjEiQGLCXSSV7pIBEgRR5zGkxgmzGSXHOxqV5dC/M1Zevqpbm9TZDE5tu358qZf8Vkzmsc+u7Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-estree/-/hermes-estree-0.8.0.tgz}
     name: hermes-estree
     version: 0.8.0
+
+  registry.npmjs.org/hermes-parser@0.14.0:
+    resolution: {integrity: sha512-pt+8uRiJhVlErY3fiXB3gKhZ72RxM6E1xRMpvfZ5n6Z5TQKQQXKorgRCRzoe02mmvLKBJFP5nPDGv75MWAgCTw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-parser/-/hermes-parser-0.14.0.tgz}
+    name: hermes-parser
+    version: 0.14.0
+    dependencies:
+      hermes-estree: registry.npmjs.org/hermes-estree@0.14.0
+    dev: false
 
   registry.npmjs.org/hermes-parser@0.8.0:
     resolution: {integrity: sha512-yZKalg1fTYG5eOiToLUaw69rQfZq/fi+/NtEXRU7N87K/XobNRhRWorh80oSge2lWUiZfTgUvRJH+XgZWrhoqA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/hermes-parser/-/hermes-parser-0.8.0.tgz}
@@ -28434,7 +28479,7 @@ packages:
       jest-resolve: registry.npmjs.org/jest-resolve@26.6.2
       natural-compare: registry.npmjs.org/natural-compare@1.4.0
       pretty-format: registry.npmjs.org/pretty-format@26.6.2
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -28466,7 +28511,7 @@ packages:
       jest-util: registry.npmjs.org/jest-util@27.5.1
       natural-compare: registry.npmjs.org/natural-compare@1.4.0
       pretty-format: registry.npmjs.org/pretty-format@27.5.1
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -28499,7 +28544,7 @@ packages:
       jest-util: registry.npmjs.org/jest-util@29.5.0
       natural-compare: registry.npmjs.org/natural-compare@1.4.0
       pretty-format: registry.npmjs.org/pretty-format@29.5.0
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -30774,6 +30819,58 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
+  registry.npmjs.org/metro-react-native-babel-preset@0.77.0(@babel/core@7.21.8):
+    resolution: {integrity: sha512-HPPD+bTxADtoE4y/4t1txgTQ1LVR6imOBy7RMHUsqMVTbekoi8Ph5YI9vKX2VMPtVWeFt0w9YnCSLPa76GcXsA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/metro-react-native-babel-preset/-/metro-react-native-babel-preset-0.77.0.tgz}
+    id: registry.npmjs.org/metro-react-native-babel-preset/0.77.0
+    name: metro-react-native-babel-preset
+    version: 0.77.0
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@babel/core': '*'
+    dependencies:
+      '@babel/core': registry.npmjs.org/@babel/core@7.21.8
+      '@babel/plugin-proposal-async-generator-functions': registry.npmjs.org/@babel/plugin-proposal-async-generator-functions@7.20.7(@babel/core@7.21.8)
+      '@babel/plugin-proposal-class-properties': registry.npmjs.org/@babel/plugin-proposal-class-properties@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-proposal-export-default-from': registry.npmjs.org/@babel/plugin-proposal-export-default-from@7.18.10(@babel/core@7.21.8)
+      '@babel/plugin-proposal-nullish-coalescing-operator': registry.npmjs.org/@babel/plugin-proposal-nullish-coalescing-operator@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-proposal-numeric-separator': registry.npmjs.org/@babel/plugin-proposal-numeric-separator@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-proposal-object-rest-spread': registry.npmjs.org/@babel/plugin-proposal-object-rest-spread@7.20.7(@babel/core@7.21.8)
+      '@babel/plugin-proposal-optional-catch-binding': registry.npmjs.org/@babel/plugin-proposal-optional-catch-binding@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-proposal-optional-chaining': registry.npmjs.org/@babel/plugin-proposal-optional-chaining@7.21.0(@babel/core@7.21.8)
+      '@babel/plugin-syntax-dynamic-import': registry.npmjs.org/@babel/plugin-syntax-dynamic-import@7.8.3(@babel/core@7.21.8)
+      '@babel/plugin-syntax-export-default-from': registry.npmjs.org/@babel/plugin-syntax-export-default-from@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-syntax-flow': registry.npmjs.org/@babel/plugin-syntax-flow@7.22.5(@babel/core@7.21.8)
+      '@babel/plugin-syntax-nullish-coalescing-operator': registry.npmjs.org/@babel/plugin-syntax-nullish-coalescing-operator@7.8.3(@babel/core@7.21.8)
+      '@babel/plugin-syntax-optional-chaining': registry.npmjs.org/@babel/plugin-syntax-optional-chaining@7.8.3(@babel/core@7.21.8)
+      '@babel/plugin-transform-arrow-functions': registry.npmjs.org/@babel/plugin-transform-arrow-functions@7.21.5(@babel/core@7.21.8)
+      '@babel/plugin-transform-async-to-generator': registry.npmjs.org/@babel/plugin-transform-async-to-generator@7.20.7(@babel/core@7.21.8)
+      '@babel/plugin-transform-block-scoping': registry.npmjs.org/@babel/plugin-transform-block-scoping@7.21.0(@babel/core@7.21.8)
+      '@babel/plugin-transform-classes': registry.npmjs.org/@babel/plugin-transform-classes@7.21.0(@babel/core@7.21.8)
+      '@babel/plugin-transform-computed-properties': registry.npmjs.org/@babel/plugin-transform-computed-properties@7.21.5(@babel/core@7.21.8)
+      '@babel/plugin-transform-destructuring': registry.npmjs.org/@babel/plugin-transform-destructuring@7.21.3(@babel/core@7.21.8)
+      '@babel/plugin-transform-flow-strip-types': registry.npmjs.org/@babel/plugin-transform-flow-strip-types@7.22.5(@babel/core@7.21.8)
+      '@babel/plugin-transform-function-name': registry.npmjs.org/@babel/plugin-transform-function-name@7.18.9(@babel/core@7.21.8)
+      '@babel/plugin-transform-literals': registry.npmjs.org/@babel/plugin-transform-literals@7.18.9(@babel/core@7.21.8)
+      '@babel/plugin-transform-modules-commonjs': registry.npmjs.org/@babel/plugin-transform-modules-commonjs@7.21.5(@babel/core@7.21.8)
+      '@babel/plugin-transform-named-capturing-groups-regex': registry.npmjs.org/@babel/plugin-transform-named-capturing-groups-regex@7.20.5(@babel/core@7.21.8)
+      '@babel/plugin-transform-parameters': registry.npmjs.org/@babel/plugin-transform-parameters@7.21.3(@babel/core@7.21.8)
+      '@babel/plugin-transform-react-display-name': registry.npmjs.org/@babel/plugin-transform-react-display-name@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-transform-react-jsx': registry.npmjs.org/@babel/plugin-transform-react-jsx@7.21.5(@babel/core@7.21.8)
+      '@babel/plugin-transform-react-jsx-self': registry.npmjs.org/@babel/plugin-transform-react-jsx-self@7.21.0(@babel/core@7.21.8)
+      '@babel/plugin-transform-react-jsx-source': registry.npmjs.org/@babel/plugin-transform-react-jsx-source@7.19.6(@babel/core@7.21.8)
+      '@babel/plugin-transform-runtime': registry.npmjs.org/@babel/plugin-transform-runtime@7.21.4(@babel/core@7.21.8)
+      '@babel/plugin-transform-shorthand-properties': registry.npmjs.org/@babel/plugin-transform-shorthand-properties@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-transform-spread': registry.npmjs.org/@babel/plugin-transform-spread@7.20.7(@babel/core@7.21.8)
+      '@babel/plugin-transform-sticky-regex': registry.npmjs.org/@babel/plugin-transform-sticky-regex@7.18.6(@babel/core@7.21.8)
+      '@babel/plugin-transform-typescript': registry.npmjs.org/@babel/plugin-transform-typescript@7.21.3(@babel/core@7.21.8)
+      '@babel/plugin-transform-unicode-regex': registry.npmjs.org/@babel/plugin-transform-unicode-regex@7.18.6(@babel/core@7.21.8)
+      '@babel/template': registry.npmjs.org/@babel/template@7.21.9
+      babel-plugin-transform-flow-enums: registry.npmjs.org/babel-plugin-transform-flow-enums@0.0.2(@babel/core@7.21.8)
+      react-refresh: registry.npmjs.org/react-refresh@0.4.3
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   registry.npmjs.org/metro-react-native-babel-transformer@0.72.3(@babel/core@7.21.8):
     resolution: {integrity: sha512-Ogst/M6ujYrl/+9mpEWqE3zF7l2mTuftDTy3L8wZYwX1pWUQWQpfU1aJBeWiLxt1XlIq+uriRjKzKoRoIK57EA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/metro-react-native-babel-transformer/-/metro-react-native-babel-transformer-0.72.3.tgz}
     id: registry.npmjs.org/metro-react-native-babel-transformer/0.72.3
@@ -30791,6 +30888,24 @@ packages:
       nullthrows: registry.npmjs.org/nullthrows@1.1.1
     transitivePeerDependencies:
       - supports-color
+
+  registry.npmjs.org/metro-react-native-babel-transformer@0.77.0(@babel/core@7.21.8):
+    resolution: {integrity: sha512-uCV1Kt4ebY9/hT7ayDGMDgIsrbyxiBHNP+q0LGxscOx3D/QODv1z+WhfC4Hy0/1wDCGV3l0EQrfLqM+7qpjsWA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/metro-react-native-babel-transformer/-/metro-react-native-babel-transformer-0.77.0.tgz}
+    id: registry.npmjs.org/metro-react-native-babel-transformer/0.77.0
+    name: metro-react-native-babel-transformer
+    version: 0.77.0
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@babel/core': '*'
+    dependencies:
+      '@babel/core': registry.npmjs.org/@babel/core@7.21.8
+      babel-preset-fbjs: registry.npmjs.org/babel-preset-fbjs@3.4.0(@babel/core@7.21.8)
+      hermes-parser: registry.npmjs.org/hermes-parser@0.14.0
+      metro-react-native-babel-preset: registry.npmjs.org/metro-react-native-babel-preset@0.77.0(@babel/core@7.21.8)
+      nullthrows: registry.npmjs.org/nullthrows@1.1.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   registry.npmjs.org/metro-resolver@0.72.3:
     resolution: {integrity: sha512-wu9zSMGdxpKmfECE7FtCdpfC+vrWGTdVr57lDA0piKhZV6VN6acZIvqQ1yZKtS2WfKsngncv5VbB8Y5eHRQP3w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/metro-resolver/-/metro-resolver-0.72.3.tgz}
@@ -31865,7 +31980,7 @@ packages:
     dependencies:
       growly: registry.npmjs.org/growly@1.3.0
       is-wsl: registry.npmjs.org/is-wsl@2.2.0
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       shellwords: registry.npmjs.org/shellwords@0.1.1
       uuid: registry.npmjs.org/uuid@8.3.2
       which: registry.npmjs.org/which@2.0.2
@@ -31907,7 +32022,7 @@ packages:
     dependencies:
       hosted-git-info: registry.npmjs.org/hosted-git-info@4.1.0
       is-core-module: registry.npmjs.org/is-core-module@2.12.0
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       validate-npm-package-license: registry.npmjs.org/validate-npm-package-license@3.0.4
 
   registry.npmjs.org/normalize-path@2.1.1:
@@ -37282,7 +37397,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: registry.npmjs.org/lru-cache@6.0.0
-    dev: true
 
   registry.npmjs.org/send@0.18.0(supports-color@6.1.0):
     resolution: {integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/send/-/send-0.18.0.tgz}
@@ -40437,7 +40551,7 @@ packages:
       is-yarn-global: registry.npmjs.org/is-yarn-global@0.3.0
       latest-version: registry.npmjs.org/latest-version@5.1.0
       pupa: registry.npmjs.org/pupa@2.1.1
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
       semver-diff: registry.npmjs.org/semver-diff@3.1.1
       xdg-basedir: registry.npmjs.org/xdg-basedir@4.0.0
 
@@ -40840,7 +40954,7 @@ packages:
       espree: registry.npmjs.org/espree@9.5.2
       esquery: registry.npmjs.org/esquery@1.5.0
       lodash: registry.npmjs.org/lodash@4.17.21
-      semver: registry.npmjs.org/semver@7.5.2
+      semver: registry.npmjs.org/semver@7.5.4
     transitivePeerDependencies:
       - supports-color
     dev: true
