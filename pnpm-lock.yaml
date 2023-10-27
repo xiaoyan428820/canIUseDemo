@@ -91,6 +91,9 @@ importers:
       '@tarojs/plugin-platform-jd':
         specifier: workspace:*
         version: link:packages/taro-jd
+      '@tarojs/plugin-platform-mpharmony':
+        specifier: workspace:*
+        version: link:packages/taro-platform-mpharmony
       '@tarojs/plugin-platform-qq':
         specifier: workspace:*
         version: link:packages/taro-qq
@@ -2460,6 +2463,9 @@ importers:
       babel-plugin-transform-taroapi:
         specifier: workspace:*
         version: link:../babel-plugin-transform-taroapi
+      lodash-es:
+        specifier: 4.17.21
+        version: registry.npmjs.org/lodash-es@4.17.21
       resolve:
         specifier: ^1.22.0
         version: registry.npmjs.org/resolve@1.22.2
@@ -2482,6 +2488,12 @@ importers:
       rollup-plugin-ts:
         specifier: ^3.0.2
         version: registry.npmjs.org/rollup-plugin-ts@3.2.0(@babel/core@7.21.8)(@babel/plugin-transform-runtime@7.21.4)(@babel/preset-env@7.21.5)(@babel/preset-typescript@7.21.5)(@babel/runtime@7.21.5)(rollup@2.79.1)(typescript@4.9.5)
+      ts-node:
+        specifier: ^10.9.1
+        version: registry.npmjs.org/ts-node@10.9.1(@types/node@14.18.45)(typescript@4.9.5)
+      tsconfig-paths:
+        specifier: ^3.14.1
+        version: registry.npmjs.org/tsconfig-paths@3.14.2
       typescript:
         specifier: ^4.7.4
         version: registry.npmjs.org/typescript@4.9.5
@@ -2968,8 +2980,8 @@ importers:
         specifier: ~14.0.0
         version: registry.npmjs.org/expo-image-picker@14.0.3(expo@47.0.14)
       expo-keep-awake:
-        specifier: ~11.0.1
-        version: registry.npmjs.org/expo-keep-awake@11.0.1(expo@47.0.14)
+        specifier: ~12.5.0
+        version: registry.npmjs.org/expo-keep-awake@12.5.0(expo@47.0.14)
       expo-location:
         specifier: ~15.0.1
         version: registry.npmjs.org/expo-location@15.0.1(expo@47.0.14)
@@ -22948,6 +22960,17 @@ packages:
       expo: '*'
     dependencies:
       expo: registry.npmjs.org/expo@47.0.14(@babel/core@7.21.8)
+
+  registry.npmjs.org/expo-keep-awake@12.5.0(expo@47.0.14):
+    resolution: {integrity: sha512-rSmO0auHuT9YkRdKfYIdJrtXRKO0uaHNxfQx7+DTY6YTFWTrrhnQDD3aRRqvOabfpq9WBNy5u+wdNEHRdrCzDw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-12.5.0.tgz}
+    id: registry.npmjs.org/expo-keep-awake/12.5.0
+    name: expo-keep-awake
+    version: 12.5.0
+    peerDependencies:
+      expo: '*'
+    dependencies:
+      expo: registry.npmjs.org/expo@47.0.14(@babel/core@7.21.8)
+    dev: false
 
   registry.npmjs.org/expo-location@15.0.1(expo@47.0.14):
     resolution: {integrity: sha512-GOAP24m8fMahFcBT75H07f2+IQAOCOdNTzb8Ci/19NZ+Y/CY2lIvb55V8zu7Gn0+76FKPb7XC3ebQaq4ctn1QA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/expo-location/-/expo-location-15.0.1.tgz}
