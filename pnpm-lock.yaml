@@ -91,6 +91,9 @@ importers:
       '@tarojs/plugin-platform-jd':
         specifier: workspace:*
         version: link:packages/taro-jd
+      '@tarojs/plugin-platform-mpharmony':
+        specifier: workspace:*
+        version: link:packages/taro-platform-mpharmony
       '@tarojs/plugin-platform-qq':
         specifier: workspace:*
         version: link:packages/taro-qq
@@ -149,8 +152,8 @@ importers:
         specifier: 1.3.0
         version: registry.npmjs.org/@types/detect-port@1.3.0
       '@types/fs-extra':
-        specifier: ^8.0.1
-        version: registry.npmjs.org/@types/fs-extra@8.1.2
+        specifier: ^11.0.3
+        version: registry.npmjs.org/@types/fs-extra@11.0.3
       '@types/history':
         specifier: ^4.7.5
         version: registry.npmjs.org/@types/history@4.7.11
@@ -1908,8 +1911,8 @@ importers:
         specifier: 2.0.0
         version: registry.npmjs.org/find-yarn-workspace-root@2.0.0
       fs-extra:
-        specifier: ^8.0.1
-        version: registry.npmjs.org/fs-extra@8.1.0
+        specifier: ^11.1.1
+        version: registry.npmjs.org/fs-extra@11.1.1
       lodash:
         specifier: ^4.17.21
         version: registry.npmjs.org/lodash@4.17.21
@@ -2460,6 +2463,9 @@ importers:
       babel-plugin-transform-taroapi:
         specifier: workspace:*
         version: link:../babel-plugin-transform-taroapi
+      lodash-es:
+        specifier: 4.17.21
+        version: registry.npmjs.org/lodash-es@4.17.21
       resolve:
         specifier: ^1.22.0
         version: registry.npmjs.org/resolve@1.22.2
@@ -2482,6 +2488,12 @@ importers:
       rollup-plugin-ts:
         specifier: ^3.0.2
         version: registry.npmjs.org/rollup-plugin-ts@3.2.0(@babel/core@7.21.8)(@babel/plugin-transform-runtime@7.21.4)(@babel/preset-env@7.21.5)(@babel/preset-typescript@7.21.5)(@babel/runtime@7.21.5)(rollup@2.79.1)(typescript@4.9.5)
+      ts-node:
+        specifier: ^10.9.1
+        version: registry.npmjs.org/ts-node@10.9.1(@types/node@14.18.45)(typescript@4.9.5)
+      tsconfig-paths:
+        specifier: ^3.14.1
+        version: registry.npmjs.org/tsconfig-paths@3.14.2
       typescript:
         specifier: ^4.7.4
         version: registry.npmjs.org/typescript@4.9.5
@@ -3095,8 +3107,8 @@ importers:
         specifier: ^5.3.2
         version: registry.npmjs.org/acorn-jsx@5.3.2(acorn@8.8.2)
       fs-extra:
-        specifier: ^8.0.1
-        version: registry.npmjs.org/fs-extra@8.1.0
+        specifier: ^11.1.1
+        version: registry.npmjs.org/fs-extra@11.1.1
       lodash:
         specifier: ^4.17.21
         version: registry.npmjs.org/lodash@4.17.21
@@ -13208,6 +13220,15 @@ packages:
       '@types/qs': registry.npmjs.org/@types/qs@6.9.7
       '@types/serve-static': registry.npmjs.org/@types/serve-static@1.15.1
 
+  registry.npmjs.org/@types/fs-extra@11.0.3:
+    resolution: {integrity: sha512-sF59BlXtUdzEAL1u0MSvuzWd7PdZvZEtnaVkzX5mjpdWTJ8brG0jUqve3jPCzSzvAKKMHTG8F8o/WMQLtleZdQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/fs-extra/-/fs-extra-11.0.3.tgz}
+    name: '@types/fs-extra'
+    version: 11.0.3
+    dependencies:
+      '@types/jsonfile': registry.npmjs.org/@types/jsonfile@6.1.3
+      '@types/node': registry.npmjs.org/@types/node@18.15.11
+    dev: true
+
   registry.npmjs.org/@types/fs-extra@8.1.2:
     resolution: {integrity: sha512-SvSrYXfWSc7R4eqnOzbQF4TZmfpNSM9FrSWLU3EUnWBuyZqNBOrv1B1JA3byUDPUl9z4Ab3jeZG2eDdySlgNMg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/fs-extra/-/fs-extra-8.1.2.tgz}
     name: '@types/fs-extra'
@@ -13337,6 +13358,14 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz}
     name: '@types/json5'
     version: 0.0.29
+    dev: true
+
+  registry.npmjs.org/@types/jsonfile@6.1.3:
+    resolution: {integrity: sha512-/yqTk2SZ1wIezK0hiRZD7RuSf4B3whFxFamB1kGStv+8zlWScTMcHanzfc0XKWs5vA1TkHeckBlOyM8jxU8nHA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@types/jsonfile/-/jsonfile-6.1.3.tgz}
+    name: '@types/jsonfile'
+    version: 6.1.3
+    dependencies:
+      '@types/node': registry.npmjs.org/@types/node@18.15.11
     dev: true
 
   registry.npmjs.org/@types/keyv@3.1.4:
@@ -23883,7 +23912,6 @@ packages:
       graceful-fs: registry.npmjs.org/graceful-fs@4.2.11
       jsonfile: registry.npmjs.org/jsonfile@6.1.0
       universalify: registry.npmjs.org/universalify@2.0.0
-    dev: true
 
   registry.npmjs.org/fs-extra@8.1.0:
     resolution: {integrity: sha512-yhlQgA6mnOJUKOsRUFsgJdQCvkKhcz8tlZG5HBQfReYZy46OwLcY+Zia0mtdHsOo9y/hP+CxMN0TU9QxoOtG4g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/fs-extra/-/fs-extra-8.1.0.tgz}
