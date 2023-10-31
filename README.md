@@ -17,5 +17,9 @@ canIUse接口在使用字符串字面量传参时会用到babel-plugin-transform
 ### 用例
 ![Alt text](./image-1.png)
 
+![Alt text](./testCase.png)
+
 ### 结果
 ![Alt text](./image-2.png)
+
+![Alt text](./testResult.png)
