@@ -68,7 +68,7 @@
     "@testing-library/jest-native": "^4.0.4",
     "@testing-library/react-native": "^11.5.0",
     "@types/jest": "^27.4.1",
-    "@types/react-native": "^0.69.8",
+    "@types/react-native": "^0.72.7",
     "expo": "~47.0.3",
     "expo-modules-core": "~1.0.2",
     "fbjs-scripts": "^3.0.1",
@@ -79,7 +79,7 @@
     "metro-react-native-babel-preset": "^0.72.1",
     "mock-socket": "^7.1.0",
     "react": "18.1.0",
-    "react-native": "^0.70.5",
+    "react-native": "^0.72.7",
     "react-test-renderer": "18.1.0"
   },
   "peerDependencies": {
